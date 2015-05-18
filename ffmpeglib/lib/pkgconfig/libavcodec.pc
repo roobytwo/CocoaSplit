@@ -1,0 +1,14 @@
+prefix=/Users/jameswen/Develop/FFmpeg-iOS-build-script/thin/x86_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 56.26.100
+Requires: libavutil >= 54.20.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -framework QTKit -framework Foundation -framework QuartzCore -framework CoreVideo -framework Foundation -framework AVFoundation -framework CoreMedia -L/usr/local/lib -lSDLmain -lSDL -Wl,-framework,Cocoa -lssl -lcrypto -L/usr/local/Cellar/x264/r2533/lib -lx264 -framework CoreGraphics -lm -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
